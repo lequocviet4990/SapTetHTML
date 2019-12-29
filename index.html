@@ -1,0 +1,105 @@
+﻿<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Đếm ngược đến Tết Nguyên Đán 2020</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="Còn bao nhiêu ngày nữa đến Tết Nguyên Đán Canh Tý 2020?" />
+    <meta property="og:title" content="Đếm ngược đến Tết" />
+    <meta property="og:description" content="Còn bao nhiêu ngày nữa đến Tết Nguyên Đán Canh Tý 2020?" />
+    <meta property="og:url" content="https://www.saptet.com/" />
+    <meta property="og:url" content="http://saptet.emdiu.com" />
+    <link rel="canonical" href="http://saptet.emdiu.com" />
+    <meta property="og:site_name" content="Sắp Tết" />
+    <meta property="og:image" content="http://blog.emdiu.com/Images/News/HTML-SẮP-Tết.jpg" />
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="bgimg">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1 class="text-center">Sắp Tết 2020</h1>
+                    <br />
+                </div>
+             
+            </div>
+
+            <div class="row">
+                <div class="col-md-2 offset-md-2">
+                    <div class="item">
+                        <div class="number" id="ngay">36</div>
+                        <div class="title">Ngày</div>
+                    </div>
+                </div>
+
+                <div class="col-md-2  ">
+                    <div class="item">
+                        <div class="number" id="gio">30</div>
+                        <div class="title">Giờ</div>
+                    </div>
+                </div>
+
+                <div class="col-md-2  ">
+                    <div class="item">
+                        <div class="number" id="phut">21</div>
+                        <div class="title">Phút</div>
+                    </div>
+                </div>
+
+                <div class="col-md-2  ">
+                    <div class="item">
+                        <div class="number" id="giay">25</div>
+                        <div class="title">Giây</div>
+                    </div>
+                </div>
+            </div>
+            <hr>
+
+            <div class="text-center">
+                <p class="slogan">Tết đến nơi trong túi không có 1 ngàn</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+// Set the date we're counting down to
+var countDownDate = new Date("Jan 25, 2020 0:0:0").getTime();
+
+// Update the count down every 1 second
+var countdownfunction = setInterval(function() {
+
+  // Get todays date and time
+  var now = new Date().getTime();
+
+  // Find the distance between now an the count down date
+  var distance = countDownDate - now;
+
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  document.getElementById("ngay").innerHTML = days;
+  document.getElementById("gio").innerHTML = hours;
+  document.getElementById("phut").innerHTML = minutes;
+  document.getElementById("giay").innerHTML = seconds;
+
+  // If the count down is over, write some text
+  if (distance < 0) {
+    clearInterval(countdownfunction);
+    document.getElementById("demo").innerHTML = "EXPIRED";
+  }
+}, 1000);
+    </script>
+</body>
+</html>

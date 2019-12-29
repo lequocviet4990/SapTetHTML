@@ -1,0 +1,65 @@
+html, body {
+  /* Make the body to be as tall as browser window */
+  height: 100%;
+  background: #ff000c;
+  padding: 20px;
+}
+
+ .bgimg{
+   height: 80vh;
+   display: flex;
+   align-items: center;
+ }
+ 
+
+
+
+ .item {
+     background: yellow;
+     text-align: center;
+     color: #040404;
+     font-size: 20px;
+     font-weight: bold;
+     border-radius: 10%;
+ }
+.item .number{
+
+    font-size: 50px;
+
+}
+.title {
+    background: #670606;
+    color: white;
+    padding: 8px;
+}
+
+
+h1.text-center {
+    color: yellow;
+    font-size: 80px;
+}
+
+.slogan {
+    font-size: 35px;
+    color: yellow;
+    font-style: italic;
+}
+
+@media only screen and (max-width: 600px) {
+.bgimg{
+   height: auto;
+   display:block;
+   align-items: center;
+ }
+ h1.text-center {
+    color: yellow;
+    font-size: 25px;
+}
+
+.item {
+    
+    margin-bottom: 12px;
+}
+
+ 
+}
